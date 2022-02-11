@@ -1,0 +1,74 @@
+.element__links {
+  background-color: $color-grey-lightest;
+}
+
+.links-inner {
+  @extend .u-container;
+
+  padding-top: 40px;
+  padding-bottom: 50px;
+  @include media($breakpoint-medium) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}
+
+.links-title {
+  @extend .h1;
+
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.links-content {
+  @extend .body-copy;
+
+  margin-bottom: 30px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    max-width: 60%;
+  }
+}
+
+.links__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include media($breakpoint-medium) {
+    flex-direction: row;
+    margin-left: -9px;
+    margin-right: -9px;
+  }
+  @include media($breakpoint-large) {
+    justify-content: initial;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.links-link {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  @include media($breakpoint-medium) {
+    width: calc(100% / 3);
+    padding: 0 10px;
+  }
+  @include media($breakpoint-large) {
+    padding: 0 15px;
+    max-width: 300px;
+  }
+}
+
+.links-button {
+  width: 100%;
+}

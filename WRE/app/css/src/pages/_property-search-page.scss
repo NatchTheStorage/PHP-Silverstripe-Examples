@@ -1,0 +1,119 @@
+.pagepropertysearch__wrapper {
+    //TODO
+}
+
+.pagepropertysearch__results {
+    margin-top: 20px;
+    @include media($breakpoint-medium) {
+        margin-top: 60px;
+    }
+    @include media($breakpoint-large) {
+        margin-top: 64px;
+    }
+}
+
+.pagepropertysearch__property_list-text {
+    margin-bottom: 7px;
+    @include media($breakpoint-medium) {
+        margin-bottom: 20px;
+        display: flex;
+    }
+    .pagepropertysearch__property_list-header {
+        @include media($breakpoint-medium) {
+            width: 60%;
+        }
+        @include media($breakpoint-large) {
+            width: 77%;
+        }
+    }
+    .pagepropertysearch__filter {
+        position: relative;
+        display: flex;
+        @include media($breakpoint-medium) {
+            width: 40%;
+            margin-top: 30px;
+        }
+        @include media($breakpoint-large) {
+            width: 23%;
+        }
+        .pagepropertysearch__filter-text {
+            width: 20%;
+            margin-top: 12px;
+            @include media($breakpoint-medium) {
+                width: 20%;
+                margin-top: 19px;
+            }
+            @include media($breakpoint-large) {
+                width: 25%;
+            }
+        }
+        .pagepropertysearch__filter-box {
+            width: 80%;
+            position: relative;
+            margin-bottom: 0;
+            margin-right: -12px;
+            padding: 0.45em 0.45em 0.45em 0.75em;
+            @include media($breakpoint-medium) {
+                width: 80%;
+            }
+            @include media($breakpoint-large) {
+                margin-right: 0;
+            }
+        }
+    }
+    .pagepropertysearch__filter:after {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 7px;
+        background: url("/app/images/icons/arrow__down-red.svg");
+        background-size: contain;
+        right: 15px;
+        top: 16px;
+        @include media($breakpoint-medium) {
+            top: 22px;
+        }
+        @include media($breakpoint-large) {
+            top: 25px;
+        }
+    }
+
+}
+
+.pagepropertysearch__property_list {
+    @include media($breakpoint-medium) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @include media($breakpoint-large) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.propertysearchpage__pagination {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+    margin-bottom: 66px;
+    @include media($breakpoint-medium) {
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    @include media($breakpoint-large) {
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+
+    a {
+        &.disabled {
+            opacity: 0.2;
+            cursor: default;
+        }
+    }
+
+}
+

@@ -1,0 +1,513 @@
+.page__landing {
+  width: 100%;
+  padding-bottom: 65px;
+  @include media($breakpoint-laptop) {
+    padding-bottom: 80px;
+  }
+}
+
+.landing__header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 20px 25px 30px 25px;
+  @include media($breakpoint-medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px 30px;
+  }
+  @include media($breakpoint-laptop) {
+    padding: 18px 135px 16px;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.landing__header-logo {
+  height: 131px;
+  width: 131px;
+  background-image: url("/themes/app/images/logo_rescue.svg");
+  background-size: cover;
+  margin-bottom: 20px;
+  @include media($breakpoint-medium) {
+    height: 161px;
+    width: 161px;
+    margin-bottom: 0;
+  }
+  @include media($breakpoint-laptop) {
+    height: 176px;
+    width: 176px;
+  }
+}
+
+.landing__header-text {
+  @include media($breakpoint-medium) {
+    text-align: right;
+    max-width: 75%;
+  }
+  @include media($breakpoint-laptop) {
+    padding-left: 50px;
+  }
+  @include media($breakpoint-large) {
+    padding-left: 0;
+  }
+}
+
+.landing__header-title,
+.landing__header-subtitle {
+  text-align: center;
+  @include media($breakpoint-medium) {
+    text-align: right;
+  }
+}
+
+.landing__header-title {
+  @extend .h2;
+
+  color: $color-grey-darkest;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.landing__header-subtitle {
+  @extend .body-copy;
+
+  font-weight: 300;
+}
+
+// SUBSITES ============================================================================================================
+
+.landing__subsites-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+  @include media($breakpoint-medium) {
+    padding: 0 30px;
+    margin-bottom: 55px;
+  }
+  @include media($breakpoint-laptop) {
+    flex-direction: row;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 90px;
+  }
+}
+
+.landing__subsites-index,
+.subsites-index__logo,
+.subsites-index__arrow {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.subsites-index__logo,
+.subsites-index__title,
+.subsites-index__arrow {
+  z-index: 0;
+}
+
+.subsites-index__logo {
+  width: 80px;
+  height: 80px;
+  padding-right: 80px;
+  margin-right: 30px;
+  @include media($breakpoint-medium) {
+    width: 110px;
+    height: 110px;
+    padding-right: 110px;
+    margin-right: 45px;
+  }
+  @include media($breakpoint-laptop) {
+    width: 140px;
+    height: 140px;
+    padding-right: 0;
+    margin-right: 0;
+    order: 2;
+    align-self: center;
+    margin-bottom: 25px;
+  }
+}
+
+.subsites-index__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: saturate(0);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.subsites-index__cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: #ee3124aa;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.subsites-index__title {
+  @extend .h2;
+
+  text-transform: uppercase;
+  color: white;
+  min-width: 153px;
+  align-self: center;
+  @include media($breakpoint-medium) {
+    width: 100%;
+    text-align: left;
+  }
+  @include media($breakpoint-laptop) {
+    text-align: center;
+    width: 100%;
+    padding: 0 36px;
+    order: 1;
+    margin-bottom: 25px;
+  }
+}
+
+.subsites-index__arrow {
+  background-image: url("/themes/app/images/icon_arrow-right-white.svg");
+  width: 15px;
+  height: 29px;
+  align-self: center;
+  padding-left: 16px;
+  @include media($breakpoint-medium) {
+    width: 22.5px;
+    height: 38px;
+    margin-right: 42px;
+  }
+  @include media($breakpoint-laptop) {
+    width: 17px;
+    height: 31px;
+    order: 3;
+    margin-bottom: 42px;
+    margin-right: 0;
+  }
+}
+
+.landing__subsites-index {
+  display: flex;
+  position: relative;
+  padding: 17px;
+  margin-bottom: 13px;
+  justify-content: space-between;
+  transition: all 0.5s;
+  text-decoration: none;
+  @include media($breakpoint-medium) {
+    margin-bottom: 15px;
+  }
+  @include media($breakpoint-laptop) {
+    width: 20%;
+    height: 600px;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &:hover {
+      width: 30%;
+    }
+  }
+
+  &:hover {
+    .subsites-index__img {
+      filter: initial;
+    }
+
+    .subsites-index__cover {
+      background-color: #fff0 !important;
+    }
+
+    .subsites-index__arrow {
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  &#Waikato {
+    box-shadow: 0 3px #ee3214;
+    @include media($breakpoint-medium) {
+      box-shadow: 0 5px #ee3124;
+    }
+    @include media($breakpoint-laptop) {
+      box-shadow: 0 10px #ee3124;
+    }
+
+    .subsites-index__logo {
+      background-image: url("/themes/app/images/logo_waikato.svg");
+    }
+
+    .subsites-index__cover {
+      background-color: #ee3124aa;
+    }
+
+    &:hover {
+      .subsites-index__arrow {
+        background-image: url("/themes/app/images/icon_arrow-right-waikato.svg") !important;
+      }
+    }
+  }
+
+  &#TECT {
+    box-shadow: 0 3px #3cb4e7;
+    @include media($breakpoint-medium) {
+      box-shadow: 0 5px #3cb4e7;
+    }
+    @include media($breakpoint-laptop) {
+      box-shadow: 0 10px #3cb4e7;
+    }
+
+    .subsites-index__logo {
+      background-image: url("/themes/app/images/logo_tect.svg");
+    }
+
+    .subsites-index__cover {
+      background-color: #3cb4e7aa;
+    }
+
+    &:hover {
+      .subsites-index__arrow {
+        background-image: url("/themes/app/images/icon_arrow-right-tect.svg") !important;
+      }
+    }
+  }
+
+  &#Greenlea {
+    box-shadow: 0 3px #8dc63f;
+    @include media($breakpoint-medium) {
+      box-shadow: 0 5px #8dc63f;
+    }
+    @include media($breakpoint-laptop) {
+      box-shadow: 0 10px #8dc63f;
+    }
+
+    .subsites-index__logo {
+      background-image: url("/themes/app/images/logo_greenlea.svg");
+    }
+
+    .subsites-index__cover {
+      background-color: #8dc63faa;
+    }
+
+    &:hover {
+      .subsites-index__arrow {
+        background-image: url("/themes/app/images/icon_arrow-right-greenlea.svg") !important;
+      }
+    }
+  }
+
+  &#Palmerston {
+    box-shadow: 0 3px #00457c;
+    @include media($breakpoint-medium) {
+      box-shadow: 0 5px #00457c;
+    }
+    @include media($breakpoint-laptop) {
+      box-shadow: 0 10px #00457c;
+    }
+
+    .subsites-index__logo {
+      background-image: url("/themes/app/images/logo_palmerston.svg");
+    }
+
+    .subsites-index__cover {
+      background-color: #00457caa;
+    }
+
+    &:hover {
+      .subsites-index__arrow {
+        background-image: url("/themes/app/images/icon_arrow-right-palmerston.svg") !important;
+      }
+    }
+  }
+
+  &#Westpac {
+    box-shadow: 0 3px #3e5461;
+    @include media($breakpoint-medium) {
+      box-shadow: 0 5px #3e5461;
+    }
+    @include media($breakpoint-laptop) {
+      box-shadow: 0 10px #3e5461;
+    }
+
+    .subsites-index__logo {
+      background-image: url("/themes/app/images/logo_westpac.svg");
+      background-size: contain;
+      background-position: center;
+    }
+
+    .subsites-index__cover {
+      background-color: #3e5461aa;
+    }
+
+    &:hover {
+      .subsites-index__arrow {
+        background-image: url("/themes/app/images/icon_arrow-right-waikato.svg") !important;
+      }
+    }
+  }
+}
+
+// content =============================================================================================================
+
+.landing__content {
+  @extend .u-container;
+
+  margin-bottom: 60px;
+  @include media($breakpoint-medium) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include media($breakpoint-laptop) {
+    display: flex;
+  }
+}
+
+.landing__content-title,
+.landing__content-text {
+  color: $color-grey-dark;
+}
+
+.landing__content-title {
+  @extend .h1;
+
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  @include media($breakpoint-laptop) {
+    margin-bottom: 0;
+    min-width: 340px;
+    text-align: right;
+  }
+}
+
+.landing__content-divider {
+  background-color: $color-grey-light-medium;
+  width: 60px;
+  height: 1px;
+  margin-bottom: 25px;
+  @include media($breakpoint-laptop) {
+    width: 1px;
+    height: 63px;
+    margin: 0 30px;
+  }
+}
+
+.landing__content-text {
+  margin: 0;
+  @include media($breakpoint-laptop) {
+    padding-right: 100px;
+  }
+  @include media($breakpoint-large) {
+    padding-right: 0;
+  }
+}
+
+.landing__footer {
+  @extend .u-container;
+}
+
+.landing__footer-socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  @include media($breakpoint-medium) {
+    margin-top: 0;
+    align-items: center;
+  }
+  @include media($breakpoint-laptop) {
+    margin-bottom: 80px;
+  }
+
+  &.desktop {
+    display: none;
+    @include media($breakpoint-laptop) {
+      display: flex;
+    }
+  }
+
+  &.mobiletablet {
+    @include media($breakpoint-laptop) {
+      display: none;
+    }
+  }
+
+  .footer__sociallinkindex {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: 13px;
+    margin-right: 13px;
+    @include media($breakpoint-medium) {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+
+    &.facebook {
+      background-image: url("/themes/app/images/icon_facebook-dark.svg");
+      width: 30px;
+      height: 30px;
+      @include media($breakpoint-medium) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &.youtube {
+      background-image: url("/themes/app/images/icon_youtube-dark.svg");
+      width: 36px;
+      height: 27px;
+      @include media($breakpoint-medium) {
+        width: 47.5px;
+        height: 33px;
+      }
+    }
+
+    &.instagram {
+      background-image: url("/themes/app/images/icon_instagram-dark.svg");
+      width: 30px;
+      height: 30px;
+      @include media($breakpoint-medium) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &.linkedinlanding {
+      background-image: url("/themes/app/images/icon_linkedin-dark.svg");
+      width: 30px;
+      height: 30px;
+      @include media($breakpoint-medium) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.landing__footer-info {
+  @extend .body-copy;
+
+  text-align: center;
+  @include media($breakpoint-medium) {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__email,
+  .footer__phone,
+  .footer__charity {
+    font-weight: 400;
+  }
+}

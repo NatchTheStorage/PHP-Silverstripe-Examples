@@ -1,0 +1,49 @@
+.element__sketchobjects {
+  @extend .u-container;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media($breakpoint-medium) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.sketch__singlewrapper {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.sketch__single {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sketch__multiwrapper {
+  display: block;
+
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.sketch__multibox {
+  width: 100%;
+  margin-bottom: 10px;
+  @include media($breakpoint-medium) {
+    width: 50%;
+    padding: 5px;
+    margin: 0;
+  }
+  @include media($breakpoint-large) {
+    padding: 10px;
+  }
+}

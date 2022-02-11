@@ -1,0 +1,129 @@
+.page__storyholder {
+  width: 100%;
+}
+
+.storyholder__underbanner {
+  background-color: $color-grey-lightest;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  @include media($breakpoint-medium) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.storyholder__underbanner-inner {
+  @extend .u-container;
+
+  text-align: center;
+  @include media($breakpoint-medium) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.storyholder__underbanner-text {
+  @extend .h2;
+
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+.storyholder__underbanner-button {
+  @extend .c-button;
+
+  width: 100%;
+  @include media($breakpoint-medium) {
+    max-width: 270px;
+  }
+}
+
+.storyholder__content {
+  @extend .u-container;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include media($breakpoint-medium) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.storyholder__stories {
+  @extend .u-container;
+
+  padding-bottom: 30px;
+  @include media($breakpoint-medium) {
+    padding-bottom: 50px;
+  }
+  @include media($breakpoint-large) {
+    padding-bottom: 70px;
+  }
+}
+
+.storyholder__stories-list {
+  width: 100%;
+  padding-bottom: 20px;
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 60px;
+  }
+}
+
+.storyholder__videos {
+  @extend .u-container;
+
+  padding-bottom: 20px;
+  @include media($breakpoint-medium) {
+    padding-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    padding-bottom: 70px;
+  }
+}
+
+.storyholder__videos-title {
+  @extend .h1;
+
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 35px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 50px;
+  }
+}
+
+.storyholder__videos-list {
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @include media($breakpoint-large) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}

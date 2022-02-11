@@ -1,0 +1,44 @@
+.element__buttons {
+    padding-top: 30px;
+    @include media($breakpoint-medium) {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    @include media($breakpoint-large) {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.buttons__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include media($breakpoint-medium) {
+        flex-direction: row;
+        margin-left: -9px;
+        margin-right: -9px;
+    }
+    @include media($breakpoint-large) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.buttons__button {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    @include media($breakpoint-medium) {
+        width: calc(100%/3.001);
+        padding: 0 9px 0 9px;
+    }
+    @include media($breakpoint-large) {
+        padding: 0 15px 0 15px;
+    }
+
+}
+

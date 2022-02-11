@@ -1,0 +1,122 @@
+.app__elements__textimageelement {
+  .u-container {
+    @include media($breakpoint-laptop) {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 1440px;
+    }
+  }
+}
+
+.element__textimage {
+  margin: 30px 0;
+  @include media($breakpoint-medium) {
+    margin: 40px 0;
+  }
+  @include media($breakpoint-laptop) {
+    margin: 0 0;
+    display: flex;
+    align-items: center;
+
+    .textimage__text {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      width: 50%;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    &.image-on-left {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include media($breakpoint-large) {
+    .textimage__text {
+      padding-right: 115px;
+      padding-left: 115px;
+    }
+  }
+}
+
+.textimage__title {
+  @extend .h1;
+
+  text-transform: uppercase;
+  width: auto;
+}
+
+.textimage__content {
+  @extend .body-copy;
+
+  margin-top: 13px;
+  margin-bottom: 30px;
+
+  @include media($breakpoint-medium) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  @include media($breakpoint-large) {
+    margin-top: 0;
+
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+.textimage__image {
+  text-align: center;
+  padding-bottom: 12px;
+  @include media($breakpoint-laptop) {
+    width: 50%;
+    padding-bottom: 0;
+    margin-bottom: -7px;
+  }
+}
+
+.textimage__image__image {
+  width: 100%;
+}
+
+.textimage__flickity {
+  @include media($breakpoint-laptop) {
+    width: 50%;
+  }
+}
+
+.textimage__flickity-cell {
+  width: 100%;
+}
+
+.textimage__flickity-image {
+  width: 100%;
+}
+
+.textimage__buttoncontainer {
+  border-bottom: solid 1px #aaa;
+  padding-bottom: 20px;
+  @include media($breakpoint-medium) {
+    border-bottom: none;
+    padding-bottom: 30px;
+    text-align: left;
+    margin: auto;
+  }
+  @include media($breakpoint-large) {
+    padding-bottom: 0;
+    margin-bottom: 80px;
+  }
+}
+
+.textimage__button {
+  width: 100%;
+  @include media($breakpoint-medium) {
+    width: 50%;
+  }
+}
+
+.flickity-viewport {
+  @include media($breakpoint-large) {
+    margin-bottom: -7px !important;
+  }
+}

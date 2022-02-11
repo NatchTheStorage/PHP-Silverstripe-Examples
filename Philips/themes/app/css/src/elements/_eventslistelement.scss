@@ -1,0 +1,92 @@
+.element__eventslist {
+  @extend .u-container;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include media($breakpoint-medium) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.eventslist-title {
+  @extend .h1;
+
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 60px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 50px;
+  }
+}
+
+.eventslist-mobiletablet,
+.eventslist-desktop {
+  margin-bottom: 20px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 70px;
+  }
+}
+
+.eventslist-mobiletablet {
+  display: block;
+  @include media($breakpoint-medium) {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @include media($breakpoint-large) {
+    display: none;
+  }
+}
+
+.eventslist-desktop {
+  display: none;
+  @include media($breakpoint-large) {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.eventslist-buttoncontainer {
+  width: 100%;
+  @include media($breakpoint-medium) {
+    text-align: center;
+  }
+}
+
+.eventslist-button {
+  @extend .c-button;
+
+  margin: auto;
+  width: 100%;
+  @include media($breakpoint-medium) {
+    max-width: 345px;
+  }
+  @include media($breakpoint-large) {
+    max-width: 370px;
+  }
+}
+
+.eventslist-emptytext {
+  @extend p;
+
+  @include media($breakpoint-medium) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @include media($breakpoint-large) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

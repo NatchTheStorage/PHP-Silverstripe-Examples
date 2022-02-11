@@ -1,0 +1,151 @@
+.page__storycreation {
+  @extend .u-container;
+
+  padding-top: 40px;
+  padding-bottom: 60px;
+  @include media($breakpoint-medium) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .successmessage {
+    margin-bottom: 20px;
+    @include media($breakpoint-medium) {
+      margin-bottom: 30px;
+    }
+    @include media($breakpoint-large) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.storycreation-title {
+  @extend .hero-title;
+
+  margin-bottom: 26px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 34.5px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 43px;
+  }
+}
+
+.storycreation-formupper,
+.storycreation-formlower {
+  width: 100%;
+  margin-bottom: 20px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 30px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 40px;
+    width: 60%;
+  }
+}
+
+.storycreation-formtitle {
+  @extend .h2;
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.storyform-label {
+  @extend .body-copy;
+
+  margin-bottom: 11px;
+  color: $color-grey-dark;
+
+  &.large {
+    margin-bottom: 6px;
+  }
+
+  &.smol {
+    @extend .legend;
+
+    margin-bottom: 20px;
+    color: $color-grey;
+  }
+}
+
+.storyform-textfield,
+.storyform-date {
+  @extend .body-copy;
+
+  @include media($breakpoint-medium) {
+    max-width: 460px;
+  }
+}
+
+.storyform-story {
+  @extend .body-copy;
+
+  height: 450px;
+}
+
+.storyform_fileupload {
+  input {
+    @extend .body-copy;
+
+    border: 1px solid #dadada;
+    padding: 13px;
+    width: 100%;
+    text-indent: -6.8em;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  max-width: 460px;
+  margin-bottom: 15px;
+  position: relative;
+  background-color: transparent !important;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    @extend .body-copy, .c-button, .c-button--outlined  ;
+
+    display: none;
+    z-index: 2;
+    content: "Upload";
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: unset;
+    padding: 11px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    @include media($breakpoint-medium) {
+      display: block;
+      width: 25%;
+      min-width: 140px;
+      top: 35px;
+    }
+  }
+}
+
+.storyform-submit {
+  @extend .c-button;
+
+  width: 100%;
+  margin-top: 20px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 30px;
+  }
+  @include media($breakpoint-medium) {
+    max-width: 370px;
+    margin-top: 40px;
+  }
+}

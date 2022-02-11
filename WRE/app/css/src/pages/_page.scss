@@ -1,0 +1,77 @@
+.content {
+
+}
+
+#si-wrapper.si-livechat .silc-btn-button {
+    display: block;
+}
+
+#silc-btn {
+    /*display: none;*/
+    display: block;
+
+}
+
+#siWidget-chat {
+    height: calc(100% - 50px) !important;
+    bottom: 25px !important;
+    width: 100% !important;
+    min-width: 320px !important;
+    max-width: 425px !important;
+    right: 0 !important;
+    @include media($breakpoint-medium) {
+        height: calc(100% - 100px) !important;
+        max-width: 320px !important;
+        width: 40% !important;
+    }
+    @include media($breakpoint-large) {
+        width: 320px !important;
+
+    }
+}
+
+.agent__contact-item {
+    cursor: pointer;
+}
+
+#bna-chat-locator {
+    position: fixed;
+    bottom: 15px;
+    right: -65px!important;
+    z-index: 999;
+
+    body {
+        display: none!important;
+    }
+}
+
+#ifram-container {
+    height: 575px!important;
+    .chatbot-container {
+        width: 300px!important;
+        top: -60px!important;
+    }
+    body {
+        padding-top: 0px!important;
+    }
+}
+
+.banner__backlink-a {
+    text-decoration-color: white;
+    margin-bottom: 15px;
+
+    position: absolute;
+    top: inherit;
+    left: inherit;
+    transform: translateY(-20px);
+
+    &:hover {
+        text-decoration-color: white;
+    }
+}
+
+.banner__backlink {
+    @extend .type;
+    font-size: 8px;
+    color: $color-white;
+}

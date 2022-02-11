@@ -1,0 +1,129 @@
+.element__hangar {
+  background-color: $color-grey-lightest;
+}
+
+.hangar-inner {
+  @extend .u-container;
+
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  @include media($breakpoint-medium) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include media($breakpoint-large) {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 107px;
+  }
+}
+
+.hangar-inner::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 36px;
+  display: none;
+  @include media($breakpoint-medium) {
+    display: block;
+    top: 60px;
+    right: 35px;
+  }
+  @include media($breakpoint-large) {
+    top: 125px;
+    right: 45px;
+  }
+}
+
+.hangar-textcontainer {
+  width: 100%;
+  margin-bottom: 20px;
+  @include media($breakpoint-large) {
+    width: 50%;
+    padding-right: 130px;
+  }
+}
+
+.hangar-title {
+  @extend .h1;
+
+  text-transform: uppercase;
+}
+
+.hangarvisitform {
+  @include media($breakpoint-large) {
+    width: 50%;
+  }
+}
+
+.hangarvisitform-success {
+  &.active {
+    @include media($breakpoint-large) {
+      margin-top: 100px;
+    }
+  }
+}
+
+.hangarvisitform-form {
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    justify-content: flex-end;
+  }
+  @include media($breakpoint-large) {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 100px;
+  }
+}
+
+.hangarvisitform-label {
+  @extend .body-copy;
+
+  color: $color-grey-dark;
+  margin-bottom: 11px;
+}
+
+.hangarvisitform-fieldunit {
+  @include media($breakpoint-medium) {
+    width: calc(50% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @include media($breakpoint-large) {
+    width: calc(50% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.hangarvisitform-name,
+.hangarvisitform-email,
+.hangarvisitform-organisation,
+.hangarvisitform-date {
+  @extend .body-copy;
+}
+
+.hangarvisitform-submit {
+  @extend .c-button;
+
+  width: 100%;
+  @include media($breakpoint-medium) {
+    margin-top: 20px;
+    width: calc(50% - 20px);
+    margin-right: 10px;
+  }
+  @include media($breakpoint-large) {
+    margin-top: 30px;
+    width: calc(50% - 30px);
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,308 @@
+.page__home {
+  width: 100%;
+}
+
+//Map ==================================================================================================================
+
+.homepage__map-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  @include media($breakpoint-medium) {
+    height: 650px;
+  }
+  @include media($breakpoint-large) {
+    height: 900px;
+  }
+}
+
+.homepage__map {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: $color-grey;
+}
+
+.homepage__map-titlebox {
+  position: absolute;
+  background-color: #fffa;
+  top: 0;
+  left: 0;
+  width: calc(100% - 50px);
+  margin: 30px 25px 0;
+  padding: 11px 0 11px 25px;
+  box-shadow: -3px 0 var(--theme-primary);
+  @include media($breakpoint-medium) {
+    width: auto;
+    margin: 60px 0 0 30px;
+    padding: 20px 75px 20px 25px;
+  }
+  @include media($breakpoint-large) {
+    margin: 100px 0 0 135px;
+    padding-right: 140px;
+  }
+}
+
+.homepage__map-title {
+  @extend .h1;
+
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.homepage__map-legend {
+  position: absolute;
+  bottom: 100px;
+  width: calc(100% - 45px);
+  padding: 25px 0 25px 20px;
+  background-color: #fffa;
+  @include media($breakpoint-medium) {
+    width: auto;
+    padding: 30px 25px 22px;
+    margin-left: 30px;
+  }
+  @include media($breakpoint-large) {
+    margin-left: 135px;
+    padding: 30px 32px 22px 25px;
+  }
+}
+
+.homepage__map-legendindex {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+
+  &.waikato {
+    &::after {
+      background-color: #ee3124;
+    }
+  }
+
+  &.tect {
+    &::after {
+      background-color: #3cb4e7;
+    }
+  }
+
+  &.greenlea {
+    &::after {
+      background-color: #8dc63f;
+    }
+  }
+
+  &.palmerston {
+    &::after {
+      background-color: #00457c;
+    }
+  }
+}
+
+.homepage__map-legendindex::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 3px;
+  left: 0;
+  border-radius: 7px;
+}
+
+.homepage__map-legendindex-title {
+  @extend .h3;
+
+  margin: 0 0 0 25px;
+  text-transform: uppercase;
+}
+
+.homepage__map-titlebox,
+.homepage__map-legend {
+  z-index: 1;
+}
+
+.homepage__map-imagecontainer {
+  width: 100%;
+}
+
+.homepage__map-imagemode {
+  position: relative;
+  width: 100%;
+
+  @include media($breakpoint-medium) {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    @include media($breakpoint-medium) {
+      max-height: 1000px;
+    }
+  }
+}
+
+//Stories container ====================================================================================================
+.homepage__stories {
+  @extend .u-container;
+
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  @include media($breakpoint-medium) {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+}
+
+.homepage__stories-list {
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.homepage__storiescontainer-title {
+  @extend .h1;
+
+  margin-bottom: 30px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 40px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 50px;
+  }
+}
+
+// sponsors ============================================================================================================
+
+.homepage__sponsors {
+  background-color: $color-grey-lightest;
+  padding-top: 40px;
+  padding-bottom: 0.02px;
+  @include media($breakpoint-medium) {
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  @include media($breakpoint-large) {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+}
+
+.homepage__sponsorsinner {
+  @extend .u-container;
+}
+
+.homepage__sponsors-img {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  max-height: 80px;
+  max-width: 200px;
+  height: 100%;
+  @include media($breakpoint-medium) {
+    margin-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  @include media($breakpoint-laptop) {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.homepage__sponsors-index {
+  margin-bottom: 30px;
+
+  @include media($breakpoint-medium) {
+    margin-bottom: 35px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 40px;
+  }
+
+  &.principal {
+    @include media($breakpoint-medium) {
+      display: flex;
+
+      .homepage__sponsors-categorytitle {
+        margin-right: 40px;
+      }
+    }
+
+    @include media($breakpoint-large) {
+      margin-bottom: 50px;
+    }
+
+    .homepage__sponsors-img {
+      max-width: 100%;
+    }
+  }
+
+  &.associate {
+    @include media($breakpoint-medium) {
+      width: 60%;
+    }
+    @include media($breakpoint-large) {
+      width: 100%;
+    }
+  }
+
+  &.tail {
+    @include media($breakpoint-medium) {
+      width: 60%;
+    }
+    @include media($breakpoint-large) {
+      width: auto;
+    }
+  }
+}
+
+.homepage__sponsors-title {
+  @extend .h1;
+
+  text-transform: uppercase;
+  margin-bottom: 23px;
+  @include media($breakpoint-medium) {
+    margin-bottom: 50px;
+  }
+  @include media($breakpoint-large) {
+    margin-bottom: 60px;
+  }
+}
+
+.homepage__sponsors-categorytitle {
+  @extend .h3;
+
+  color: $color-grey;
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.homepage__sponsors-indeximages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+  @include media($breakpoint-medium) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.homepage__sponsors-lower {
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include media($breakpoint-large) {
+    justify-content: space-between;
+  }
+}

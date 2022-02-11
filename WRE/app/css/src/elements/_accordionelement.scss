@@ -1,0 +1,38 @@
+.element__accordion_element {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include media($breakpoint-medium) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include media($breakpoint-large) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+.accordion_element__list {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion_element__title {
+    padding-bottom: 15px;
+    @include media($breakpoint-medium) {
+        padding-bottom: 30px;
+    }
+    @include media($breakpoint-large) {
+        padding-bottom: 60px;
+    }
+}
+
+.accordionelement__accordion {
+    margin-bottom: 22px;
+    border-bottom: solid 1px #e1e1e1;
+}
+
+.accordion_element__text {
+    padding-right: 25px;
+    padding-bottom: -3px;
+}
